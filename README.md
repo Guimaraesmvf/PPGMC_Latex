@@ -3,11 +3,11 @@
 ## Modelo de Tese/Dissertação do PPGMC/FURG
 
 
-modelo.tex
+modelo.tex <br>
 Utilize esse arquivo modelo para redação da tese/dissertação
 
-ppgmc.sty
+ppgmc.sty <br>
 Configurações e formatações do modelo.
 
-.sty
+.sty <br>
 Estilos utilizados para formatação.
