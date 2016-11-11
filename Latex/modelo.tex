@@ -1,5 +1,4 @@
 % PPGMC/FURG Modelo Latex
-
 % Criado em nov/2016 - Marcus Guimaraes <guimaraesmvf@gmail.com>
 
 % Favor quando alterar esse arquivo informar o que foi alterado com comentario
@@ -18,6 +17,7 @@
 \usepackage{tocloft}
 \counterwithin{figure}{section}
 \usepackage{etoolbox}
+\usepackage{natbib}
 
 
 \numberwithin{equation}{section}
@@ -26,6 +26,10 @@
 \patchcmd{\@caption}{\csname the#1\endcsname}{\csname fnum@#1\endcsname:}{}{}
 \renewcommand*\l@figure{\@dottedtocline{1}{1.5em}{5em}}
 \let\l@table\l@figure
+\makeatother
+
+\makeatletter
+\renewcommand*\l@section{\@dottedtocline{1}{0em}{1.5em}}
 \makeatother
 
 \renewcommand{\cfttoctitlefont}{\hspace*{\fill}\Large\bfseries}
@@ -155,6 +159,7 @@ peculiaridades da língua inglesa.
 % ÍNDICE
 \newpage
 \thispagestyle{empty}
+\vspace*{-33pt}
 \renewcommand\contentsname{\centering\Large ÍNDICE}
 \tableofcontents
 
@@ -164,6 +169,7 @@ peculiaridades da língua inglesa.
 % LISTA DE FIGURAS
 \newpage
 \thispagestyle{empty}
+\vspace*{-33pt}
 \listoffigures
 
 
@@ -172,6 +178,7 @@ peculiaridades da língua inglesa.
 % LISTA DE TABELAS
 \newpage
 \thispagestyle{empty}
+\vspace*{-33pt}
 \listoftables
 
 %--------------------------------------------------------------------------------------------
@@ -346,7 +353,7 @@ A Tabela \ref{tabExemplo} traz um resumo do teste de independência de malha.
 % PODE SER UTILIZADO CITAÇÃO VIA BIBTEX USANDO APALIKE
 % OU COPIAR O .bbl NO .tex E DEIXAR TUDO EM UM UNICO ARQUIVO.
 
-Podem ser citados trabalhos publicados em artigos de revista como Hirt; Nichols (1981), em livro do tipo \cite{Lamport:LaTeX}, em anais de congressos como Grimmler et al. (2012), dissertações Gomes (2010), teses Amorim Júnior (2007) e manuais ESI Group (2014) .
+Podem ser citados trabalhos publicados em artigos de revista como Hirt; Nichols (1981), em livro do tipo \citep{Lamport:LaTeX}, em anais de congressos como \citet{braams:babel}, dissertações Gomes (2010), teses Amorim Júnior (2007) e manuais ESI Group (2014) .
 
 Devem ser evitadas citações de sites de internet.
 
@@ -357,25 +364,23 @@ O formato para as citações e referências deve seguir a norma ABNT.
 %--------------------------------------------------------------------------------------------
 % REFERENCIAS
 \section{REFERÊNCIAS}
+
+\begingroup
+\renewcommand{\section}[2]{}%
 \begin{thebibliography}{1}
 
 \bibitem[Braams, 1991]{braams:babel}
-Braams, J. (1991).
-\newblock Babel, a multilingual style-option system for use with latex's
-  standard document styles.
-\newblock {\em TUGboat}, 12(2):291--301.
+Braams, J., \newblock {\em Babel, a multilingual style-option system for use with latex's standard document styles}. \newblock TUGboat, 12(2):291--301, 1991.
 
 \bibitem[Lamport, 1986]{Lamport:LaTeX}
-Lamport, L. (1986).
-\newblock {\em LaTeX User's Guide and Document Reference Manual}.
-\newblock Addison-Wesley Publishing Company, Reading, Massachusetts.
+Lamport, L. \newblock {\bf LaTeX User's Guide and Document Reference Manual}. \newblock Addison-Wesley Publishing Company, Reading, Massachusetts, 1986.
 
 \end{thebibliography}
-
+\endgroup
 
 
 %--------------------------------------------------------------------------------------------
-\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
+%\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
 \section{ANEXOS}
 
 Os Anexos apresentam textos e documentos não elaborados pelo autor, mas que servem para fundamentar, comprovar ou ilustrar as ideias do trabalho, sem prejuízo da apresentação nem do desenvolvimento do texto.
@@ -383,7 +388,7 @@ Os Anexos apresentam textos e documentos não elaborados pelo autor, mas que ser
 Todos os anexos devem ser citados no texto.
 
 
-\subsection{Catálogo de parafusos, porcas e arruelas de Ciser}
+\subsection{Anexo 1 - Catálogo de parafusos, porcas e arruelas de Ciser}
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\linewidth]{img/catalogo}
@@ -399,7 +404,7 @@ desenvolvimento normal do texto.
 Todos os apêndices devem ser citados no texto.
 
 
-\subsection{Código utilizado para aplicação das condições de contorno}
+\subsection{Apêndice 1 - Código utilizado para aplicação das condições de contorno}
 
 \begin{figure}[h]
 \centering
