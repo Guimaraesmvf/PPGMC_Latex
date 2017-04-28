@@ -18,6 +18,15 @@
 \counterwithin{figure}{section}
 \usepackage{etoolbox}
 \usepackage{natbib}
+\usepackage{amsthm}
+\usepackage{pdflscape}
+\usepackage{lscape}
+\usepackage{array}
+\usepackage{color}
+\usepackage{cancel}
+\usepackage{tabularx}
+\usepackage{rotating}
+\usepackage{algorithm2e}
 
 
 \numberwithin{equation}{section}
@@ -39,6 +48,9 @@
 \renewcommand{\cftloftitlefont}{\hspace*{\fill}\Large\bfseries\MakeUppercase}
 \renewcommand{\cftafterloftitle}{\hspace*{\fill}}
 
+% TEOREMAS E DEFINICOES
+\newtheorem{ppgteo}{Teorema}[section]
+\newtheorem{ppgdef}{Definição}[section]
 
 \begin{document}
 \onehalfspacing
@@ -66,11 +78,11 @@ PROGRAMA DE PÓS-GRADUAÇÃO EM MODELAGEM COMPUTACIONAL\\
 Nome do candidato
 
 \vspace*{2.5cm}
-Dissertação para obtenção do Título de\\
-Mestre em Modelagem Computacional
+Dissertação/Tese para obtenção do Título de\\
+Mestre/Doutor em Modelagem Computacional
 
 % DATA
-\vspace{6cm}Rio Grande, mes, ano
+\vspace{6cm}Rio Grande, mês, ano
 
 \end{center}
 
@@ -242,6 +254,7 @@ peculiaridades da língua inglesa.
 
 Introdução da dissertação/tese.
 
+
 \subsection{Titulo nível 2}
 
 Exemplo de texto em uma subseçao do trabalho.
@@ -258,6 +271,7 @@ O texto deve ser escrito de forma impessoal:\\
 
 \noindent- ... fez-se um estudo ...\\
 - ... um estudo foi feito ...\\
+
 
 
 Deve ser evitado dois títulos (ou sub títulos) que não seja separados por pelo menos um
@@ -348,6 +362,53 @@ A Tabela \ref{tabExemplo} traz um resumo do teste de independência de malha.
 \end{center}
 \end{table}
 
+\subsection{Teoremas e Definições}
+
+\subsubsection{Teoremas}
+Os teoremas serão numerado por seção, logo seguem o padrão:\\
+
+
+Teorema 1.1 corresponde ao primeiro teorema da seção 1. O Teorema 2.3 sendo o terceiro teorema da seção 2, e assim sucessivamente.\\
+
+
+Teoremas podem ser utilizados através do ambiente \texttt{ppgteo}\\
+
+% UTILIZADO APENAS PARA EXEMPLO NO PDF
+\noindent \texttt{\textbackslash begin\{ppgteo\}}\\
+\textit{Descrição do teorema....}\\
+\texttt{\textbackslash end\{ppgteo\}}\\
+%------------------------------------------------------------------------
+
+% AMBIENTE TEOREMA
+\begin{ppgteo}
+O seguinte teorema segue...
+\label{teo1}
+\end{ppgteo}
+
+Teoremas podem ser citados no corpo de texto: De acordo com o Teo. \ref{teo1} .....\\
+
+
+\subsubsection{Definições}
+
+O mesmo procedimento é adotada para definições.\\
+
+
+Definições podem ser utilizadas através do ambiente \texttt{ppgdef}\\
+
+% UTILIZADO APENAS PARA EXEMPLO NO PDF
+\noindent \texttt{\textbackslash begin\{ppgdef\}}\\
+\textit{Descrição da definição....}\\
+\texttt{\textbackslash end\{ppgdef\}}
+%------------------------------------------------------------------------
+
+% AMBIENTE DEFINICAO
+\begin{ppgdef}
+A seguinte definição segue...
+\label{def1}
+\end{ppgdef}
+
+Definições podem ser citadas no corpo de texto: De acordo com a Def. \ref{def1}  .....
+	
 	
 \subsection{Citações e referências}
 % PODE SER UTILIZADO CITAÇÃO VIA BIBTEX USANDO APALIKE
@@ -358,6 +419,7 @@ Podem ser citados trabalhos publicados em artigos de revista como Hirt; Nichols 
 Devem ser evitadas citações de sites de internet.
 
 O formato para as citações e referências deve seguir a norma ABNT.
+
 
 
 

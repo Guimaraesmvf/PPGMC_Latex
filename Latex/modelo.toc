@@ -9,7 +9,10 @@
 \contentsline {subsubsection}{\numberline {2.2.1}Exemplo de utiliza\IeC {\c c}\IeC {\~a}o de figura}{13}
 \contentsline {subsection}{\numberline {2.3}Formata\IeC {\c c}\IeC {\~a}o das tabelas}{14}
 \contentsline {subsubsection}{\numberline {2.3.1}Exemplo de utiliza\IeC {\c c}\IeC {\~a}o de tabela}{14}
-\contentsline {subsection}{\numberline {2.4}Cita\IeC {\c c}\IeC {\~o}es e refer\IeC {\^e}ncias}{15}
+\contentsline {subsection}{\numberline {2.4}Teoremas e Defini\IeC {\c c}\IeC {\~o}es}{15}
+\contentsline {subsubsection}{\numberline {2.4.1}Teoremas}{15}
+\contentsline {subsubsection}{\numberline {2.4.2}Defini\IeC {\c c}\IeC {\~o}es}{15}
+\contentsline {subsection}{\numberline {2.5}Cita\IeC {\c c}\IeC {\~o}es e refer\IeC {\^e}ncias}{15}
 \contentsline {section}{\numberline {3}REFER\IeC {\^E}NCIAS}{16}
 \contentsline {section}{\numberline {4}ANEXOS}{17}
 \contentsline {subsection}{\numberline {4.1}Anexo 1 - Cat\IeC {\'a}logo de parafusos, porcas e arruelas de Ciser}{17}
